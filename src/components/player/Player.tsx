@@ -36,11 +36,12 @@ const GET_LESSON_BY_SLUG = gql`
 
 export function Player(props: PlayerProps) {
 
-    const { data } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG, {
+    const { data, loading } = useQuery<GetLessonBySlugResponse>(GET_LESSON_BY_SLUG, {
         variables: {
             slug: props.lessonSlug
-        }
-    });
+        },
+        fetchPolicy: 'no-cache'
+    })
 
     if (!data) {
         return (
