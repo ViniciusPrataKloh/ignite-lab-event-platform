@@ -1,11 +1,11 @@
-import { Event } from "./pages/Event";
+import { Router } from "./components/router/Router";
 
 function App() {
 
   return (
-    <div>
-      <Event />
-    </div>
+
+    <Router />
+
   );
 }
 
