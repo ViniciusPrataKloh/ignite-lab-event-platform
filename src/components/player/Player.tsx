@@ -1,7 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import '@vime/core/themes/default.css';
 import { DefaultUi, Player as VideoPlayer, Youtube } from "@vime/react";
-import { CaretRight, FileArrowDown } from "phosphor-react";
+import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
 
 interface PlayerProps {
     lessonSlug: string;
@@ -101,12 +101,14 @@ export function Player(props: PlayerProps) {
                             href=""
                             className="flex items-center justify-center p-4 bg-green-500 text-sm font-bold rounded gap-2 uppercase hover:bg-green-700 transition-colors"
                         >
+                            <DiscordLogo size={20} />
                             Comunidade do Discord
                         </a>
                         <a
                             href=""
-                            className="flex items-center justify-center p-4 text-blue-500 text-sm font-bold rounded gap-2 uppercase hover:bg-blue-500 hover:text-gray-900 transition-colors"
+                            className="flex items-center justify-center p-4 text-blue-500 text-sm font-bold rounded gap-2 uppercase border-[1px] border-blue-500 hover:bg-blue-500 hover:text-gray-900 transition-colors"
                         >
+                            <Lightning size={20} />
                             Acesse o desafio
                         </a>
                     </div>
